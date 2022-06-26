@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="anchorscroll.html" />
     <Content Include="CustomFilter.html" />
     <Content Include="CustomServices.html" />
     <Content Include="EmployeeList.html" />
@@ -80,6 +81,9 @@
     <Content Include="Image\Screenshot %281%29.png" />
     <Content Include="IncludeDirective.html" />
     <Content Include="init.html" />
+    <Content Include="Layout.html" />
+    <Content Include="Route.html" />
+    <Content Include="Scripts\anchorscroll.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
@@ -92,6 +96,7 @@
     <Content Include="Scripts\HideShow.js" />
     <Content Include="Scripts\IncludeDirective.js" />
     <Content Include="Scripts\init.js" />
+    <Content Include="Scripts\Route.js" />
     <Content Include="Scripts\Script.js" />
     <Content Include="Scripts\Script1.js" />
     <Content Include="Scripts\SearchFilter.js" />
