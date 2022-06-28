@@ -1,11 +1,11 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="Demo">
 <head>
     <meta charset="utf-8" />
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/angular-route.min.js"></script>
     <link href="Styles.css" rel="stylesheet" />
-
+    <script src="Scripts/Route.js"></script>
     <title></title>
 </head>
 <body>
@@ -19,9 +19,9 @@
         </tr>
         <tr>
             <td class="leftMenu">
-                <a href="#/home">Home</a>
-                <a href="#/courses">Courses</a>
-                <a href="#/students">Students</a>
+                <a href="#/Home" ui-sref-active="activeState">Home</a>
+                <a href="#/Courses" ui-sref-active="activeState">Courses</a>
+                <a href="#/Students" ui-sref-active="activeState">Students</a>
             </td>
             <td class="mainContent">
                 <ng-view></ng-view>
