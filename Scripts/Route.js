@@ -2,20 +2,34 @@
 
 var app = angular
     .module("Demo", ["ngRoute"])
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider, $locationProvider) {
         $routeProvider
-            .when("/home", {
-                templateUrl: "Templates/home.html",
-                controller: "homeController"
+            .when("/Home", {
+                templateUrl: "Templates/Home.html",
+                controller: "homeController",
+                controllerAs: "homeCtrl",
+                caseInsensitiveMatch: true
             })
-            .when("/courses", {
-                templateUrl: "Templates/courses.html",
-                controller: "coursesController"
+            .when("/Courses", {
+                templateUrl: "Templates/Courses.html",
+                controller: "coursesController as coursesCtrl",
+                
+                caseInsensitiveMatch: true
             })
-            .when("/students", {
-                templateUrl: "Templates/students.html",
-                controller: "studentsController"
+            .when("/Students", {
+                templateUrl: "Templates/Students.html",
+                controller: "studentsController as studentsCtrl",
+                caseInsensitiveMatch: true
             })
+            .when("/Students/:id", {
+                templateUrl: "Templates/StudentDetails.html",
+                controller: "studentDetailsController as studentDetailsCtrl",
+                caseInsensitiveMatch: true
+            })
+            .otherwise({
+                redirectTo: "/home"
+            })
+        $locationProvider.html5Mode(true);
     })
     .controller("homeController", function ($scope) {
         $scope.message = "Home Page";
